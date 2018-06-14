@@ -1,0 +1,19 @@
+n=int(input())
+Sx=0
+Sy=0
+Sxy=0
+Sxx=0
+for i in range(n):
+  a=input()
+  num=a.split(" ")
+  p=[float(numero) for numero in num]
+  Sx+=p[0]
+  Sy+=p[1]
+  Sxy+=p[0]*p[1]
+  Sxx+=p[0]*p[0]
+  
+a = (n*Sxy-Sx*Sy)/(n*Sxx-Sx**2)
+b = (Sy*Sxx-Sx*Sxy)/(n*Sxx-Sx**2)
+
+print('A: %.2f' %a)
+print('B: %.2f' %b)
